@@ -1,0 +1,39 @@
+{
+  "celebrantName": "Lucía Castro",
+  "eventType": "Mis XV años",
+  "eventDateISO": "2026-07-20T19:00:00-06:00",
+  "eventDateDisplay": "20 de julio",
+  "eventYearDisplay": "2026",
+  "eventTimeDisplay": "Recepción · 7:00 p.m.",
+  "venueName": "Salón Stars Palace",
+  "addressLine1": "Av. Río Soto La Marina 62",
+  "addressLine2": "Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX",
+  "mapsQuery": "Salón Stars Palace Av. Río Soto La Marina 62, Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX",
+  "dressCodeTitle": "Vestimenta",
+  "dressCodeText": "Semi formal ¡pero cómoda para bailar toda la noche!",
+  "whatsAppNumberE164": "+525536740512",
+  "whatsAppPrefill": "Hola, confirmo mi asistencia a los XV años de Lucía Castro. Mi nombre es: ____ . Asistiré con: ____ .",
+  "palette": {
+    "blush": "#ffdede",
+    "blushDeep": "#f2bfc4",
+    "gold": "#d4af37",
+    "text": "#2b2b2b",
+    "muted": "#6b6b6b",
+    "white": "#ffffff"
+  },
+  "quote": "Hay momentos en la vida que se sueñan, se esperan y se celebran rodeados de quienes más amamos.",
+  "music": {
+    "enabled": true,
+    "file": "assets/music.mp3",
+    "label": "Música"
+  },
+  "photos": {
+    "hero": "assets/photos/hero.png",
+    "editorial": "assets/photos/editorial.png",
+    "gallery": [
+      "assets/photos/gallery-1.png",
+      "assets/photos/gallery-2.png",
+      "assets/photos/gallery-3.png"
+    ]
+  }
+}

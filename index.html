@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffdede" />
+  <title>Invitación | Lucía Castro XV</title>
+  <meta name="description" content="Invitación digital premium — Mis XV años de Lucía Castro" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg-ornaments" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__mark">✦</span>
+        <span class="brand__text" id="brandText">Invitación</span>
+      </div>
+
+      <div class="topbar__actions">
+        <button class="icon-btn" id="musicBtn" type="button" aria-label="Reproducir música" title="Música">
+          <span class="icon">♪</span>
+          <span class="label">Música</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <audio id="bgMusic" preload="metadata" loop></audio>
+
+  <main>
+    <section class="hero">
+      <div class="hero__media" role="img" aria-label="Foto principal de la quinceañera">
+        <img id="heroImg" class="hero__img" alt="" />
+        <div class="hero__veil" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="kicker" id="eventType">Mis XV años</p>
+        <h1 class="title" id="celebrantName">Lucía Castro</h1>
+        <p class="subtitle" id="heroDate">20 · Julio · 2026</p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" id="rsvpBtnTop" href="#" target="_blank" rel="noreferrer">
+            Confirmar asistencia
+          </a>
+          <a class="btn btn--ghost" id="mapsBtnTop" href="#" target="_blank" rel="noreferrer">
+            Ver ubicación
+          </a>
+        </div>
+
+        <div class="countdown" aria-label="Cuenta regresiva">
+          <div class="countdown__title">Faltan</div>
+          <div class="countdown__grid" id="countdownGrid">
+            <div class="pill"><div class="pill__num" id="cdDays">--</div><div class="pill__lbl">Días</div></div>
+            <div class="pill"><div class="pill__num" id="cdHours">--</div><div class="pill__lbl">Horas</div></div>
+            <div class="pill"><div class="pill__num" id="cdMins">--</div><div class="pill__lbl">Min</div></div>
+            <div class="pill"><div class="pill__num" id="cdSecs">--</div><div class="pill__lbl">Seg</div></div>
+          </div>
+          <div class="countdown__hint" id="countdownHint">Te esperamos ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--quote">
+      <div class="container">
+        <div class="quote">
+          <div class="quote__ornament" aria-hidden="true">“</div>
+          <p class="quote__text" id="quoteText"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Detalles</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card__icon">📅</div>
+            <div class="card__title">Fecha</div>
+            <div class="card__text" id="dateDisplay"></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">⏰</div>
+            <div class="card__title">Hora</div>
+            <div class="card__text" id="timeDisplay"></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">📍</div>
+            <div class="card__title">Lugar</div>
+            <div class="card__text" id="venueDisplay"></div>
+          </div>
+          <div class="card">
+            <div class="card__icon">👗</div>
+            <div class="card__title" id="dressCodeTitle"></div>
+            <div class="card__text" id="dressCodeText"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--editorial">
+      <div class="container">
+        <div class="editorial">
+          <img id="editorialImg" class="editorial__img" alt="Foto editorial de la quinceañera" />
+          <div class="editorial__frame" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--location">
+      <div class="container">
+        <h2 class="section__title">Ubicación</h2>
+        <div class="location">
+          <div class="location__info">
+            <div class="location__venue" id="venueName"></div>
+            <div class="location__addr" id="addressLine1"></div>
+            <div class="location__addr" id="addressLine2"></div>
+
+            <div class="location__actions">
+              <a class="btn btn--primary" id="mapsBtn" href="#" target="_blank" rel="noreferrer">Abrir en Google Maps</a>
+              <button class="btn btn--ghost" id="copyAddressBtn" type="button">Copiar dirección</button>
+            </div>
+
+            <div class="toast" id="toast" role="status" aria-live="polite">Copiado ✨</div>
+          </div>
+
+          <div class="location__map">
+            <iframe
+              id="mapsEmbed"
+              title="Mapa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Galería</h2>
+        <div class="gallery" id="gallery"></div>
+        <p class="section__hint">Tip: toca una foto para verla más grande.</p>
+      </div>
+    </section>
+
+    <section class="section section--rsvp">
+      <div class="container">
+        <div class="rsvp">
+          <h2 class="rsvp__title">Confirma tu asistencia</h2>
+          <p class="rsvp__text">Tu presencia hará este día aún más especial. Por favor confirma tu asistencia.</p>
+
+          <a class="btn btn--primary btn--xl" id="rsvpBtn" href="#" target="_blank" rel="noreferrer">
+            Confirmar por WhatsApp
+          </a>
+
+          <p class="rsvp__hint">Si vas con acompañantes, inclúyelos en el mensaje.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__line"></div>
+        <p class="footer__text">Con cariño,</p>
+        <p class="footer__name" id="footerName">Lucía & familia</p>
+        <p class="footer__thanks">Gracias por ser parte de este momento ✨</p>
+      </div>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Cerrar">×</button>
+    <img class="lightbox__img" id="lightboxImg" alt="Foto ampliada" />
+  </div>
+
+  <script id="invite-config" type="application/json">
+{
+  "celebrantName": "Lucía Castro",
+  "eventType": "Mis XV años",
+  "eventDateISO": "2026-07-20T19:00:00-06:00",
+  "eventDateDisplay": "20 de julio",
+  "eventYearDisplay": "2026",
+  "eventTimeDisplay": "Recepción · 7:00 p.m.",
+  "venueName": "Salón Stars Palace",
+  "addressLine1": "Av. Río Soto La Marina 62",
+  "addressLine2": "Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX",
+  "mapsQuery": "Salón Stars Palace Av. Río Soto La Marina 62, Paseos de Churubusco, Iztapalapa, 09030 Ciudad de México, CDMX",
+  "dressCodeTitle": "Vestimenta",
+  "dressCodeText": "Semi formal ¡pero cómoda para bailar toda la noche!",
+  "whatsAppNumberE164": "+525536740512",
+  "whatsAppPrefill": "Hola, confirmo mi asistencia a los XV años de Lucía Castro. Mi nombre es: ____ . Asistiré con: ____ .",
+  "palette": {
+    "blush": "#ffdede",
+    "blushDeep": "#f2bfc4",
+    "gold": "#d4af37",
+    "text": "#2b2b2b",
+    "muted": "#6b6b6b",
+    "white": "#ffffff"
+  },
+  "quote": "Hay momentos en la vida que se sueñan, se esperan y se celebran rodeados de quienes más amamos.",
+  "music": {
+    "enabled": true,
+    "file": "assets/music.mp3",
+    "label": "Música"
+  },
+  "photos": {
+    "hero": "assets/photos/hero.png",
+    "editorial": "assets/photos/editorial.png",
+    "gallery": [
+      "assets/photos/gallery-1.png",
+      "assets/photos/gallery-2.png",
+      "assets/photos/gallery-3.png"
+    ]
+  }
+}
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
